@@ -45,7 +45,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 }
 func main() {
 
-	fileServer := http.FileServer(http.Dir("./static")) // this will look for index.html file
+	fileServer := http.FileServer(http.Dir("./static")) // this will automatically look for index.html file
 
 	http.Handle("/", fileServer)
 
